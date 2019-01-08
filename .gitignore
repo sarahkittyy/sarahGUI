@@ -1,6 +1,5 @@
-bin/gui
+bin/
 .vscode
 GUI.zip
 guitest.code-workspace
-obj
-obj/*
+obj/
