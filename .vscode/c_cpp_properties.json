@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "defines": [],
+            "cStandard": "c11",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/header"
+            ]
+        }
+    ],
+    "version": 4
+}
