@@ -1,0 +1,5 @@
+bin/gui
+.vscode
+GUI.zip
+guitest.code-workspace
+obj/*
