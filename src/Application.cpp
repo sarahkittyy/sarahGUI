@@ -4,7 +4,6 @@ Application::Application() :
 	mWindow(sf::VideoMode(1000,600), "Gui Testing")
 {
 	//Init window default values
-	mWindow.setJoystickEnabled(false);
 	mWindow.setFramerateLimit(60);
 }
 
