@@ -26,6 +26,19 @@ public:
 	 * 
 	 */
 	virtual ~GuiComponent();
+	
+	/**
+	 * @brief Calls this->update(), as well as all childrens' updateRecursive(), updating all child objects with one parent call.
+	 * 
+	 */
+	void updateRecursive();
+
+	/**
+	 * @brief Update this & only this object, no children.
+	 * 
+	 * @remarks Usually only called by updateRecursive(), but no harm should be causable by only calling this. Try not to mix calls. 
+	 */
+	virtual void update();
 
 	/**
 	 * @brief Called by ResourceManager.initObject(), inherit & override to initialize textures & resources.

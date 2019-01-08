@@ -19,6 +19,23 @@ void GuiComponent::draw(
 	/*IMPORTANT: DERIVED CLASSES SHOULD DRAW ALL THEIR CHILDREN*/
 }
 
+void GuiComponent::updateRecursive()
+{
+	//Update this;
+	update();
+
+	//Update all children.
+	for(auto &i : mChildren)
+	{
+		i->updateRecursive();
+	}
+}
+
+void GuiComponent::update()
+{
+	//Nothing, derived classes should (but don't have to) inherit & override.
+}
+
 void GuiComponent::setParent(GuiComponent* parent)
 {
 	mParent = parent;
