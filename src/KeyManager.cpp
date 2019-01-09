@@ -3,6 +3,7 @@
 //STATIC DECL
 sf::RenderWindow* KeyManager::mWindowPtr;
 std::unordered_map<sf::Keyboard::Key, short> KeyManager::mKeyStates;
+short KeyManager::mMouseState;
 /////////////
 
 void KeyManager::update()
@@ -30,12 +31,30 @@ void KeyManager::update()
 			else mKeyStates[cKey] = 0;
 		}
 	}
+
+	//Mouse position updates!
+	//If the mouse is pressed, set state to 1.
+	if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+	{
+		mMouseState = 1;
+	}
+	else
+	{
+		//Set the mouse state to just released if it was pressed..
+		//Otherwise, set it to unpressed.
+		mMouseState = (mMouseState == 1) ? (2) : (0);
+	}
 }
 
 sf::Vector2i KeyManager::getMousePos()
 {
 	//Get the mouse position relative to the current window.
 	return sf::Mouse::getPosition(*mWindowPtr);
+}
+
+short KeyManager::getMouseState()
+{
+	return mMouseState;
 }
 
 short KeyManager::getKeyState(sf::Keyboard::Key key)
