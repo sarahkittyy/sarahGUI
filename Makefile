@@ -26,6 +26,9 @@ run: all
 	@cd bin; ./gui
 	@printf "\n"
 
+docs:
+	doxygen
+
 all: $(OBJECTS)
 	$(CC) $(LINKFLAGS) $(OBJECTS)
 
