@@ -3,10 +3,12 @@
 #include <SFML/Graphics.hpp>
 
 #include "ResourceManager.h"
+#include "KeyManager.h"
+
 #include "GuiComponent.h"
 #include "GuiContainer.h"
 #include "GuiLabel.h"
-#include "KeyManager.h"
+#include "GuiButton.h"
 
 /**
  * @brief Class to store all application data.

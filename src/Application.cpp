@@ -13,13 +13,7 @@ int Application::run()
 	mResource.initObject(g);
 	g.setPosition(25,25);
 
-	GuiLabel sub;
-	mResource.initObject(sub);
-	g.addChild(&sub);
-	sub.setString("hewwo!");
-	sub.setCharacterSize(18);
-	sub.setPosition(50,0);
-	sub.updateAlignment(GuiLabel::Align::TOP_MIDDLE);
+	GuiButton
 
 	//Main application loop
 	while(mWindow.isOpen())
