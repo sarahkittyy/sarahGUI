@@ -9,10 +9,11 @@ SOURCES = $(wildcard $(SRCDIR)/*.cpp)
 OBJECTS = $(patsubst $(SRCDIR)/%.cpp, $(OBJDIR)/%.o, $(SOURCES))
 
 CC = g++
-CCFLAGS = -c -Wall -Wno-unused-variable -I$(INCDIR)/ -I$(HDRDIR)/
+CCFLAGS = -c -Wall -Wno-unused-variable -I$(INCDIR)/ -I$(HDRDIR)/ -g
 
 LIBRARIES = -lstdc++ -lsfml-window -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-network -lsfml-system
-LIBRARIES-DEBUG = -lstdc++ -lsfml-window-d -lsfml-graphics-d -lsfml-window-d -lsfml-audio-d -lsfml-network-d -lsfml-system-d
+LIBRARIES-DEBUG = $(patsubst -lsf%,-lsf%-d,$(LIBRARIES))
+
 LINKFLAGS = -o $(OUTDIR)/$(EXECUTABLE)
 
 clean:
