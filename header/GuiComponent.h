@@ -61,6 +61,13 @@ public:
 	GuiComponent* getParent();
 
 	/**
+	 * @brief Get the combined transformation of this object's parent & all parents above.
+	 * 
+	 * @return sf::Transform The sum transform of all elements up to the top of the tree.
+	 */
+	sf::Transform getFullTransform();
+
+	/**
 	 * @brief Pushes the object into the vector of children. Also calls setParent() on the child object.
 	 * 
 	 * @param newChild The child to associate.

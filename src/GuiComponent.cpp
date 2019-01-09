@@ -2,7 +2,7 @@
 
 GuiComponent::GuiComponent()
 {
-	
+	mParent = nullptr;
 }
 
 GuiComponent::~GuiComponent()
@@ -44,6 +44,21 @@ void GuiComponent::setParent(GuiComponent* parent)
 GuiComponent* GuiComponent::getParent()
 {
 	return mParent;
+}
+
+sf::Transform GuiComponent::getFullTransform()
+{
+	/*
+	If there is no parent, return getTransform().
+	Else, return getTransform()*getParent()->getFullTransform().
+	*/
+	return 
+	(
+		getTransform() *
+		((getParent()==nullptr) ? 
+			(sf::Transform::Identity) : 
+			(getParent()->getFullTransform()))
+	); 
 }
 
 void GuiComponent::addChild(GuiComponent* newChild)
