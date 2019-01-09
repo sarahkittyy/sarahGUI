@@ -5,6 +5,9 @@ Application::Application() :
 {
 	//Init window default values
 	mWindow.setFramerateLimit(60);
+
+	//Init KeyManager's window instance.
+	KeyManager::setWindowReference(&mWindow);
 }
 
 int Application::run()
