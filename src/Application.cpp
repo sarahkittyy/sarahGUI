@@ -9,11 +9,14 @@ Application::Application() :
 
 int Application::run()
 {
-	GuiContainer g;
-	mResource.initObject(g);
-	g.setPosition(25,25);
+	GuiContainer baseGui;
+	mResource.initObject(baseGui);
+	baseGui.setPosition(25,25);
 
-	GuiButton
+	GuiButton b;
+	mResource.initObject(b);
+	baseGui.addChild(&b);
+	b.setPosition(25,25);
 
 	//Main application loop
 	while(mWindow.isOpen())
@@ -38,10 +41,11 @@ int Application::run()
 		}
 		//UPDATES
 		KeyManager::update();
+		baseGui.updateRecursive();
 
 		//DRAWING
 		mWindow.clear(sf::Color(0x3399ff));
-		mWindow.draw(g);
+		mWindow.draw(baseGui);
 		mWindow.display();
 	}
 
