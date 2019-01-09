@@ -1,0 +1,141 @@
+\hypertarget{class_gui_label}{}\section{Gui\+Label Class Reference}
+\label{class_gui_label}\index{Gui\+Label@{Gui\+Label}}
+
+
+G\+UI component for displaying \& updating simple text.  
+
+
+
+
+{\ttfamily \#include $<$Gui\+Label.\+h$>$}
+
+Inheritance diagram for Gui\+Label\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_gui_label}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gui_label_a408cd142a14adb06d632ed44e674ddf2}\label{class_gui_label_a408cd142a14adb06d632ed44e674ddf2}} 
+enum \mbox{\hyperlink{class_gui_label_a408cd142a14adb06d632ed44e674ddf2}{Align}} \{ \newline
+{\bfseries T\+O\+P\+\_\+\+L\+E\+FT}, 
+{\bfseries T\+O\+P\+\_\+\+M\+I\+D\+D\+LE}, 
+{\bfseries T\+O\+P\+\_\+\+R\+I\+G\+HT}, 
+{\bfseries M\+I\+D\+D\+L\+E\+\_\+\+L\+E\+FT}, 
+\newline
+{\bfseries M\+I\+D\+D\+L\+E\+\_\+\+M\+I\+D\+D\+LE}, 
+{\bfseries M\+I\+D\+D\+L\+E\+\_\+\+R\+I\+G\+HT}, 
+{\bfseries B\+O\+T\+T\+O\+M\+\_\+\+L\+E\+FT}, 
+{\bfseries B\+O\+T\+T\+O\+M\+\_\+\+M\+I\+D\+D\+LE}, 
+\newline
+{\bfseries B\+O\+T\+T\+O\+M\+\_\+\+R\+I\+G\+HT}
+ \}
+\begin{DoxyCompactList}\small\item\em Alignment enum, for aligning text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gui_label_aa996ad603e5692673485780ee6b6bf27}\label{class_gui_label_aa996ad603e5692673485780ee6b6bf27}} 
+\mbox{\hyperlink{class_gui_label_aa996ad603e5692673485780ee6b6bf27}{Gui\+Label}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gui_label_afa1cce21b5bfaba22076619ec635de84}{rm\+\_\+init}} (\mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} \&r)
+\begin{DoxyCompactList}\small\item\em Resource initialization for init\+Object() \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gui_label_a40dcdb9bc406ab8ecee7e1e6df69c989}{set\+String}} (std\+::string new\+String)
+\begin{DoxyCompactList}\small\item\em Set the text displayed. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_gui_label_ade16f5556300d8c353f7c45684bd75eb}{get\+String}} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the currently displayed text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gui_label_ab0eaf82245f1271dd8e261fd306647b1}{set\+Character\+Size}} (unsigned short n)
+\begin{DoxyCompactList}\small\item\em Set the font\textquotesingle{}s character size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gui_label_ae9ba2f0ceb51fbe073ba8fc297288aff}{update\+Alignment}} (\mbox{\hyperlink{class_gui_label_a408cd142a14adb06d632ed44e674ddf2}{Align}} new\+Align)
+\begin{DoxyCompactList}\small\item\em Update the alignment of the text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+G\+UI component for displaying \& updating simple text. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gui_label_ade16f5556300d8c353f7c45684bd75eb}\label{class_gui_label_ade16f5556300d8c353f7c45684bd75eb}} 
+\index{Gui\+Label@{Gui\+Label}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!Gui\+Label@{Gui\+Label}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily std\+::string Gui\+Label\+::get\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieve the currently displayed text. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The current text. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gui_label_afa1cce21b5bfaba22076619ec635de84}\label{class_gui_label_afa1cce21b5bfaba22076619ec635de84}} 
+\index{Gui\+Label@{Gui\+Label}!rm\+\_\+init@{rm\+\_\+init}}
+\index{rm\+\_\+init@{rm\+\_\+init}!Gui\+Label@{Gui\+Label}}
+\subsubsection{\texorpdfstring{rm\+\_\+init()}{rm\_init()}}
+{\footnotesize\ttfamily void Gui\+Label\+::rm\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resource initialization for init\+Object() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The global resource manager. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_gui_component_a7c42118c5d2ba58ca02a1ea5ff81fe78}{Gui\+Component}}.
+
+\mbox{\Hypertarget{class_gui_label_ab0eaf82245f1271dd8e261fd306647b1}\label{class_gui_label_ab0eaf82245f1271dd8e261fd306647b1}} 
+\index{Gui\+Label@{Gui\+Label}!set\+Character\+Size@{set\+Character\+Size}}
+\index{set\+Character\+Size@{set\+Character\+Size}!Gui\+Label@{Gui\+Label}}
+\subsubsection{\texorpdfstring{set\+Character\+Size()}{setCharacterSize()}}
+{\footnotesize\ttfamily void Gui\+Label\+::set\+Character\+Size (\begin{DoxyParamCaption}\item[{unsigned short}]{n }\end{DoxyParamCaption})}
+
+
+
+Set the font\textquotesingle{}s character size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The new font size. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gui_label_a40dcdb9bc406ab8ecee7e1e6df69c989}\label{class_gui_label_a40dcdb9bc406ab8ecee7e1e6df69c989}} 
+\index{Gui\+Label@{Gui\+Label}!set\+String@{set\+String}}
+\index{set\+String@{set\+String}!Gui\+Label@{Gui\+Label}}
+\subsubsection{\texorpdfstring{set\+String()}{setString()}}
+{\footnotesize\ttfamily void Gui\+Label\+::set\+String (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+String }\end{DoxyParamCaption})}
+
+
+
+Set the text displayed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+String} & The new text to show. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gui_label_ae9ba2f0ceb51fbe073ba8fc297288aff}\label{class_gui_label_ae9ba2f0ceb51fbe073ba8fc297288aff}} 
+\index{Gui\+Label@{Gui\+Label}!update\+Alignment@{update\+Alignment}}
+\index{update\+Alignment@{update\+Alignment}!Gui\+Label@{Gui\+Label}}
+\subsubsection{\texorpdfstring{update\+Alignment()}{updateAlignment()}}
+{\footnotesize\ttfamily void Gui\+Label\+::update\+Alignment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gui_label_a408cd142a14adb06d632ed44e674ddf2}{Align}}}]{new\+Align }\end{DoxyParamCaption})}
+
+
+
+Update the alignment of the text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Align} & The new alignment to configure the text to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header/Gui\+Label.\+h\item 
+src/Gui\+Label.\+cpp\end{DoxyCompactItemize}

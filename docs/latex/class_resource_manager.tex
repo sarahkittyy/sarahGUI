@@ -1,0 +1,89 @@
+\hypertarget{class_resource_manager}{}\section{Resource\+Manager Class Reference}
+\label{class_resource_manager}\index{Resource\+Manager@{Resource\+Manager}}
+
+
+Class to manage resources to avoid loading the same file twice.  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Texture $\ast$ \mbox{\hyperlink{class_resource_manager_ad393b13cf5d0f81de842fb8bfc3ccb09}{get\+Texture}} (std\+::string file)
+\begin{DoxyCompactList}\small\item\em Get the texture at the specified path. If it is not already loaded, load it with .load\+From\+File() \end{DoxyCompactList}\item 
+sf\+::\+Font $\ast$ \mbox{\hyperlink{class_resource_manager_aa0b060cd409f3cfefc85b5fc3b17f5bb}{get\+Font}} (std\+::string file)
+\begin{DoxyCompactList}\small\item\em Get the font at the specified path, or load it if it is not already loaded. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename \+\_\+\+GC $>$ }\\void \mbox{\hyperlink{class_resource_manager_ad543c034d0cef8fd2f3e8f32b49ebb3f}{init\+Object}} (\+\_\+\+GC \&object)
+\begin{DoxyCompactList}\small\item\em Template function. Calls rm\+\_\+init (inherited from \mbox{\hyperlink{class_gui_component}{Gui\+Component}}) and is intended to load all textures/fonts required by the specified object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to manage resources to avoid loading the same file twice. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_resource_manager_aa0b060cd409f3cfefc85b5fc3b17f5bb}\label{class_resource_manager_aa0b060cd409f3cfefc85b5fc3b17f5bb}} 
+\index{Resource\+Manager@{Resource\+Manager}!get\+Font@{get\+Font}}
+\index{get\+Font@{get\+Font}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection{\texorpdfstring{get\+Font()}{getFont()}}
+{\footnotesize\ttfamily sf\+::\+Font $\ast$ Resource\+Manager\+::get\+Font (\begin{DoxyParamCaption}\item[{std\+::string}]{file }\end{DoxyParamCaption})}
+
+
+
+Get the font at the specified path, or load it if it is not already loaded. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The path of the font. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Font$\ast$ A pointer to the font object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_resource_manager_ad393b13cf5d0f81de842fb8bfc3ccb09}\label{class_resource_manager_ad393b13cf5d0f81de842fb8bfc3ccb09}} 
+\index{Resource\+Manager@{Resource\+Manager}!get\+Texture@{get\+Texture}}
+\index{get\+Texture@{get\+Texture}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection{\texorpdfstring{get\+Texture()}{getTexture()}}
+{\footnotesize\ttfamily sf\+::\+Texture $\ast$ Resource\+Manager\+::get\+Texture (\begin{DoxyParamCaption}\item[{std\+::string}]{file }\end{DoxyParamCaption})}
+
+
+
+Get the texture at the specified path. If it is not already loaded, load it with .load\+From\+File() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The path of the texture to load. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Texture$\ast$ A pointer to the texture. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_resource_manager_ad543c034d0cef8fd2f3e8f32b49ebb3f}\label{class_resource_manager_ad543c034d0cef8fd2f3e8f32b49ebb3f}} 
+\index{Resource\+Manager@{Resource\+Manager}!init\+Object@{init\+Object}}
+\index{init\+Object@{init\+Object}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection{\texorpdfstring{init\+Object()}{initObject()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+GC $>$ \\
+void Resource\+Manager\+::init\+Object (\begin{DoxyParamCaption}\item[{\+\_\+\+GC \&}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Template function. Calls rm\+\_\+init (inherited from \mbox{\hyperlink{class_gui_component}{Gui\+Component}}) and is intended to load all textures/fonts required by the specified object. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em \+\_\+\+GC} & Should be a G\+UI component or derived class. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & The object to initialze. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header/Resource\+Manager.\+h\item 
+src/Resource\+Manager.\+cpp\end{DoxyCompactItemize}

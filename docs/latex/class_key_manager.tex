@@ -1,0 +1,87 @@
+\hypertarget{class_key_manager}{}\section{Key\+Manager Class Reference}
+\label{class_key_manager}\index{Key\+Manager@{Key\+Manager}}
+
+
+Simple mostly static \mbox{\hyperlink{class_key_manager}{Key\+Manager}} class for retrieving the state of the keyboard \& mouse globally.  
+
+
+
+
+{\ttfamily \#include $<$Key\+Manager.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_key_manager_acb062eff198aaa23e63cf07763e6b9ae}{set\+Window\+Reference}} (sf\+::\+Render\+Window $\ast$m\+Window\+Ptr)
+\begin{DoxyCompactList}\small\item\em Set the internal window reference for \mbox{\hyperlink{class_key_manager_aae40b808bf243100e3da7e63fb8cebe5}{get\+Mouse\+Pos()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_key_manager_ab58d4b6587a7a83fe15c504be7424c2b}\label{class_key_manager_ab58d4b6587a7a83fe15c504be7424c2b}} 
+static void \mbox{\hyperlink{class_key_manager_ab58d4b6587a7a83fe15c504be7424c2b}{update}} ()
+\begin{DoxyCompactList}\small\item\em Main key updating function. Call once per frame. \end{DoxyCompactList}\item 
+static sf\+::\+Vector2i \mbox{\hyperlink{class_key_manager_aae40b808bf243100e3da7e63fb8cebe5}{get\+Mouse\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the mouse position. \end{DoxyCompactList}\item 
+static short \mbox{\hyperlink{class_key_manager_a6769c626a0ac7e919979e9128dfb6a88}{get\+Key\+State}} (sf\+::\+Keyboard\+::\+Key key)
+\begin{DoxyCompactList}\small\item\em Retrieves current keyboard states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple mostly static \mbox{\hyperlink{class_key_manager}{Key\+Manager}} class for retrieving the state of the keyboard \& mouse globally. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_key_manager_a6769c626a0ac7e919979e9128dfb6a88}\label{class_key_manager_a6769c626a0ac7e919979e9128dfb6a88}} 
+\index{Key\+Manager@{Key\+Manager}!get\+Key\+State@{get\+Key\+State}}
+\index{get\+Key\+State@{get\+Key\+State}!Key\+Manager@{Key\+Manager}}
+\subsubsection{\texorpdfstring{get\+Key\+State()}{getKeyState()}}
+{\footnotesize\ttfamily short Key\+Manager\+::get\+Key\+State (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retrieves current keyboard states. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+short The state of the key.
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+0\+: Unpressed 1\+: Pressed 2\+: Just Released 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_key_manager_aae40b808bf243100e3da7e63fb8cebe5}\label{class_key_manager_aae40b808bf243100e3da7e63fb8cebe5}} 
+\index{Key\+Manager@{Key\+Manager}!get\+Mouse\+Pos@{get\+Mouse\+Pos}}
+\index{get\+Mouse\+Pos@{get\+Mouse\+Pos}!Key\+Manager@{Key\+Manager}}
+\subsubsection{\texorpdfstring{get\+Mouse\+Pos()}{getMousePos()}}
+{\footnotesize\ttfamily sf\+::\+Vector2i Key\+Manager\+::get\+Mouse\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retrieve the mouse position. 
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Vector2i The mouse position. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_key_manager_acb062eff198aaa23e63cf07763e6b9ae}\label{class_key_manager_acb062eff198aaa23e63cf07763e6b9ae}} 
+\index{Key\+Manager@{Key\+Manager}!set\+Window\+Reference@{set\+Window\+Reference}}
+\index{set\+Window\+Reference@{set\+Window\+Reference}!Key\+Manager@{Key\+Manager}}
+\subsubsection{\texorpdfstring{set\+Window\+Reference()}{setWindowReference()}}
+{\footnotesize\ttfamily static void Key\+Manager\+::set\+Window\+Reference (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{m\+Window\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the internal window reference for \mbox{\hyperlink{class_key_manager_aae40b808bf243100e3da7e63fb8cebe5}{get\+Mouse\+Pos()}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m\+Window\+Ptr} & A pointer to the window on which this class is operating on.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+C\+A\+LL T\+H\+I\+S!! $>$w$<$ 
+\end{DoxyRemark}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header/Key\+Manager.\+h\item 
+src/Key\+Manager.\+cpp\end{DoxyCompactItemize}

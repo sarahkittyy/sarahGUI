@@ -1,0 +1,209 @@
+\hypertarget{class_gui_component}{}\section{Gui\+Component Class Reference}
+\label{class_gui_component}\index{Gui\+Component@{Gui\+Component}}
+
+
+Main abstract G\+UI class object. Contains all base methods to manage children \& the parent object, for a tree-\/like G\+UI structure.  
+
+
+
+
+{\ttfamily \#include $<$Gui\+Component.\+h$>$}
+
+Inheritance diagram for Gui\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_gui_component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gui_component_a39e1734c781ba4ac8c87da58e0a10ebd}\label{class_gui_component_a39e1734c781ba4ac8c87da58e0a10ebd}} 
+\mbox{\hyperlink{class_gui_component_a39e1734c781ba4ac8c87da58e0a10ebd}{Gui\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gui_component_ad94998891efad935b4422cf1da69e4af}\label{class_gui_component_ad94998891efad935b4422cf1da69e4af}} 
+virtual \mbox{\hyperlink{class_gui_component_ad94998891efad935b4422cf1da69e4af}{$\sim$\+Gui\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Virtual Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gui_component_ac58e20a01f67cf605b069ef853dfab66}\label{class_gui_component_ac58e20a01f67cf605b069ef853dfab66}} 
+void \mbox{\hyperlink{class_gui_component_ac58e20a01f67cf605b069ef853dfab66}{update\+Recursive}} ()
+\begin{DoxyCompactList}\small\item\em Calls this-\/$>$\mbox{\hyperlink{class_gui_component_adacaca1d0604e6b93cb22962e60cc285}{update()}}, as well as all childrens\textquotesingle{} \mbox{\hyperlink{class_gui_component_ac58e20a01f67cf605b069ef853dfab66}{update\+Recursive()}}, updating all child objects with one parent call. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_gui_component_adacaca1d0604e6b93cb22962e60cc285}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update this \& only this object, no children. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gui_component_a7c42118c5d2ba58ca02a1ea5ff81fe78}\label{class_gui_component_a7c42118c5d2ba58ca02a1ea5ff81fe78}} 
+virtual void \mbox{\hyperlink{class_gui_component_a7c42118c5d2ba58ca02a1ea5ff81fe78}{rm\+\_\+init}} (\mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} \&)=0
+\begin{DoxyCompactList}\small\item\em Called by \mbox{\hyperlink{class_resource_manager_ad543c034d0cef8fd2f3e8f32b49ebb3f}{Resource\+Manager.\+init\+Object()}}, inherit \& override to initialize textures \& resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gui_component_a526481fb2424c1ea771e78be27a091f9}{set\+Parent}} (\mbox{\hyperlink{class_gui_component}{Gui\+Component}} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Set this object\textquotesingle{}s parent. Usually called from the parent\textquotesingle{}s \mbox{\hyperlink{class_gui_component_a5bccaccef3d0eab8af3be84cab1300de}{add\+Child()}} method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_gui_component}{Gui\+Component}} $\ast$ \mbox{\hyperlink{class_gui_component_aba1969f731ef56396a1e69e50ff1f8fb}{get\+Parent}} ()
+\begin{DoxyCompactList}\small\item\em Get this object\textquotesingle{}s parent. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_gui_component_a5bccaccef3d0eab8af3be84cab1300de}{add\+Child}} (\mbox{\hyperlink{class_gui_component}{Gui\+Component}} $\ast$new\+Child)
+\begin{DoxyCompactList}\small\item\em Pushes the object into the vector of children. Also calls \mbox{\hyperlink{class_gui_component_a526481fb2424c1ea771e78be27a091f9}{set\+Parent()}} on the child object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_gui_component_ac979fb459db6feda90bc7c11a6a60623}{remove\+Child}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Removes a child from the list of children by name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gui_component_ac8fea01fa84d85bc1e511211f74cfd53}\label{class_gui_component_ac8fea01fa84d85bc1e511211f74cfd53}} 
+virtual void \mbox{\hyperlink{class_gui_component_ac8fea01fa84d85bc1e511211f74cfd53}{remove\+Children}} ()
+\begin{DoxyCompactList}\small\item\em Completely removes all children. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_gui_component}{Gui\+Component}} $\ast$ \mbox{\hyperlink{class_gui_component_a2167444f909f08b7be3805309d7ad831}{search\+Child}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Searches \& retrieves a child by name, locally. Does not search children of children. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_gui_component}{Gui\+Component}} $\ast$ \mbox{\hyperlink{class_gui_component_a7f1e0e731d458135182850a53de06f95}{search\+Child\+Recursive}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Searches for children recursively through the whole G\+UI tree. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_gui_component_a521f21d8ae5369fe255a1209fcd3bd0f}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the name of this object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gui_component_ae673013e55aa98c6ee267fad3e282766}{set\+Name}} (std\+::string new\+Name)
+\begin{DoxyCompactList}\small\item\em Sets the name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gui_component_ad25e337a93c4b506634e5766cc46ef4a}\label{class_gui_component_ad25e337a93c4b506634e5766cc46ef4a}} 
+\mbox{\hyperlink{class_gui_component}{Gui\+Component}} $\ast$ \mbox{\hyperlink{class_gui_component_ad25e337a93c4b506634e5766cc46ef4a}{m\+Parent}}
+\begin{DoxyCompactList}\small\item\em This object\textquotesingle{}s parent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gui_component_a040e49b543fd6a36b1e0133a5e8dbd3d}\label{class_gui_component_a040e49b543fd6a36b1e0133a5e8dbd3d}} 
+std\+::vector$<$ \mbox{\hyperlink{class_gui_component}{Gui\+Component}} $\ast$ $>$ \mbox{\hyperlink{class_gui_component_a040e49b543fd6a36b1e0133a5e8dbd3d}{m\+Children}}
+\begin{DoxyCompactList}\small\item\em The vector of children. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main abstract G\+UI class object. Contains all base methods to manage children \& the parent object, for a tree-\/like G\+UI structure. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gui_component_a5bccaccef3d0eab8af3be84cab1300de}\label{class_gui_component_a5bccaccef3d0eab8af3be84cab1300de}} 
+\index{Gui\+Component@{Gui\+Component}!add\+Child@{add\+Child}}
+\index{add\+Child@{add\+Child}!Gui\+Component@{Gui\+Component}}
+\subsubsection{\texorpdfstring{add\+Child()}{addChild()}}
+{\footnotesize\ttfamily void Gui\+Component\+::add\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gui_component}{Gui\+Component}} $\ast$}]{new\+Child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Pushes the object into the vector of children. Also calls \mbox{\hyperlink{class_gui_component_a526481fb2424c1ea771e78be27a091f9}{set\+Parent()}} on the child object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Child} & The child to associate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gui_component_a521f21d8ae5369fe255a1209fcd3bd0f}\label{class_gui_component_a521f21d8ae5369fe255a1209fcd3bd0f}} 
+\index{Gui\+Component@{Gui\+Component}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Gui\+Component@{Gui\+Component}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily std\+::string Gui\+Component\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the name of this object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The name of this object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gui_component_aba1969f731ef56396a1e69e50ff1f8fb}\label{class_gui_component_aba1969f731ef56396a1e69e50ff1f8fb}} 
+\index{Gui\+Component@{Gui\+Component}!get\+Parent@{get\+Parent}}
+\index{get\+Parent@{get\+Parent}!Gui\+Component@{Gui\+Component}}
+\subsubsection{\texorpdfstring{get\+Parent()}{getParent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gui_component}{Gui\+Component}} $\ast$ Gui\+Component\+::get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get this object\textquotesingle{}s parent. 
+
+\begin{DoxyReturn}{Returns}
+Gui\+Component$\ast$ A pointer to the parent object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gui_component_ac979fb459db6feda90bc7c11a6a60623}\label{class_gui_component_ac979fb459db6feda90bc7c11a6a60623}} 
+\index{Gui\+Component@{Gui\+Component}!remove\+Child@{remove\+Child}}
+\index{remove\+Child@{remove\+Child}!Gui\+Component@{Gui\+Component}}
+\subsubsection{\texorpdfstring{remove\+Child()}{removeChild()}}
+{\footnotesize\ttfamily void Gui\+Component\+::remove\+Child (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Removes a child from the list of children by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The child\textquotesingle{}s name to remove. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gui_component_a2167444f909f08b7be3805309d7ad831}\label{class_gui_component_a2167444f909f08b7be3805309d7ad831}} 
+\index{Gui\+Component@{Gui\+Component}!search\+Child@{search\+Child}}
+\index{search\+Child@{search\+Child}!Gui\+Component@{Gui\+Component}}
+\subsubsection{\texorpdfstring{search\+Child()}{searchChild()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gui_component}{Gui\+Component}} $\ast$ Gui\+Component\+::search\+Child (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Searches \& retrieves a child by name, locally. Does not search children of children. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the child to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Gui\+Component$\ast$ Either the child requested, or nullptr if it doesn\textquotesingle{}t exist. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gui_component_a7f1e0e731d458135182850a53de06f95}\label{class_gui_component_a7f1e0e731d458135182850a53de06f95}} 
+\index{Gui\+Component@{Gui\+Component}!search\+Child\+Recursive@{search\+Child\+Recursive}}
+\index{search\+Child\+Recursive@{search\+Child\+Recursive}!Gui\+Component@{Gui\+Component}}
+\subsubsection{\texorpdfstring{search\+Child\+Recursive()}{searchChildRecursive()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gui_component}{Gui\+Component}} $\ast$ Gui\+Component\+::search\+Child\+Recursive (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Searches for children recursively through the whole G\+UI tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the child to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Gui\+Component$\ast$ The child to retrieve, or nullptr if the name is not registered. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gui_component_ae673013e55aa98c6ee267fad3e282766}\label{class_gui_component_ae673013e55aa98c6ee267fad3e282766}} 
+\index{Gui\+Component@{Gui\+Component}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Gui\+Component@{Gui\+Component}}
+\subsubsection{\texorpdfstring{set\+Name()}{setName()}}
+{\footnotesize\ttfamily void Gui\+Component\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Name }\end{DoxyParamCaption})}
+
+
+
+Sets the name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & The new name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gui_component_a526481fb2424c1ea771e78be27a091f9}\label{class_gui_component_a526481fb2424c1ea771e78be27a091f9}} 
+\index{Gui\+Component@{Gui\+Component}!set\+Parent@{set\+Parent}}
+\index{set\+Parent@{set\+Parent}!Gui\+Component@{Gui\+Component}}
+\subsubsection{\texorpdfstring{set\+Parent()}{setParent()}}
+{\footnotesize\ttfamily void Gui\+Component\+::set\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gui_component}{Gui\+Component}} $\ast$}]{parent }\end{DoxyParamCaption})}
+
+
+
+Set this object\textquotesingle{}s parent. Usually called from the parent\textquotesingle{}s \mbox{\hyperlink{class_gui_component_a5bccaccef3d0eab8af3be84cab1300de}{add\+Child()}} method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gui_component_adacaca1d0604e6b93cb22962e60cc285}\label{class_gui_component_adacaca1d0604e6b93cb22962e60cc285}} 
+\index{Gui\+Component@{Gui\+Component}!update@{update}}
+\index{update@{update}!Gui\+Component@{Gui\+Component}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Gui\+Component\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Update this \& only this object, no children. 
+
+\begin{DoxyRemark}{Remarks}
+Usually only called by \mbox{\hyperlink{class_gui_component_ac58e20a01f67cf605b069ef853dfab66}{update\+Recursive()}}, but no harm should be causable by only calling this. Try not to mix calls. 
+\end{DoxyRemark}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header/Gui\+Component.\+h\item 
+src/Gui\+Component.\+cpp\end{DoxyCompactItemize}
