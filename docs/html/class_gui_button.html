@@ -87,11 +87,17 @@ $(document).ready(function(){initNavTree('class_gui_button.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_gui_button-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">GuiButton Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Simple GUI Button class.  
+ <a href="class_gui_button.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_gui_button_8h_source.html">GuiButton.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for GuiButton:</div>
 <div class="dyncontent">
@@ -102,8 +108,22 @@ Inheritance diagram for GuiButton:</div>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a4c33541a08894c3f742ee5ea03127152"><td class="memItemLeft" align="right" valign="top"><a id="a4c33541a08894c3f742ee5ea03127152"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_button.html#a4c33541a08894c3f742ee5ea03127152">GuiButton</a> ()</td></tr>
+<tr class="memdesc:a4c33541a08894c3f742ee5ea03127152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor. <br /></td></tr>
+<tr class="separator:a4c33541a08894c3f742ee5ea03127152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5890862aa1f104f615f5c2c2ee80dfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_button.html#ac5890862aa1f104f615f5c2c2ee80dfc">rm_init</a> (<a class="el" href="class_resource_manager.html">ResourceManager</a> &amp;r)</td></tr>
+<tr class="memdesc:ac5890862aa1f104f615f5c2c2ee80dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the <a class="el" href="class_resource_manager.html" title="Class to manage resources to avoid loading the same file twice. ">ResourceManager</a> for initialization.  <a href="#ac5890862aa1f104f615f5c2c2ee80dfc">More...</a><br /></td></tr>
+<tr class="separator:ac5890862aa1f104f615f5c2c2ee80dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd7f69faf6201309727bce6ff9d04f56"><td class="memItemLeft" align="right" valign="top"><a id="afd7f69faf6201309727bce6ff9d04f56"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_button.html#afd7f69faf6201309727bce6ff9d04f56">update</a> ()</td></tr>
+<tr class="memdesc:afd7f69faf6201309727bce6ff9d04f56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main update function, call either by a parent object's <a class="el" href="class_gui_component.html#ac58e20a01f67cf605b069ef853dfab66" title="Calls this-&gt;update(), as well as all childrens&#39; updateRecursive(), updating all child objects with on...">updateRecursive()</a> or call manually. <br /></td></tr>
+<tr class="separator:afd7f69faf6201309727bce6ff9d04f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8abf4f0d2ffebe67206446947d22c865"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_button.html#a8abf4f0d2ffebe67206446947d22c865">isPressed</a> ()</td></tr>
+<tr class="memdesc:a8abf4f0d2ffebe67206446947d22c865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether or not the button is being pressed.  <a href="#a8abf4f0d2ffebe67206446947d22c865">More...</a><br /></td></tr>
+<tr class="separator:a8abf4f0d2ffebe67206446947d22c865"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_gui_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_gui_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_gui_component.html">GuiComponent</a></td></tr>
 <tr class="memitem:a39e1734c781ba4ac8c87da58e0a10ebd inherit pub_methods_class_gui_component"><td class="memItemLeft" align="right" valign="top"><a id="a39e1734c781ba4ac8c87da58e0a10ebd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_component.html#a39e1734c781ba4ac8c87da58e0a10ebd">GuiComponent</a> ()</td></tr>
@@ -117,19 +137,15 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_component.html#ac58e20a01f67cf605b069ef853dfab66">updateRecursive</a> ()</td></tr>
 <tr class="memdesc:ac58e20a01f67cf605b069ef853dfab66 inherit pub_methods_class_gui_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls this-&gt;<a class="el" href="class_gui_component.html#adacaca1d0604e6b93cb22962e60cc285" title="Update this &amp; only this object, no children. ">update()</a>, as well as all childrens' <a class="el" href="class_gui_component.html#ac58e20a01f67cf605b069ef853dfab66" title="Calls this-&gt;update(), as well as all childrens&#39; updateRecursive(), updating all child objects with on...">updateRecursive()</a>, updating all child objects with one parent call. <br /></td></tr>
 <tr class="separator:ac58e20a01f67cf605b069ef853dfab66 inherit pub_methods_class_gui_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adacaca1d0604e6b93cb22962e60cc285 inherit pub_methods_class_gui_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_component.html#adacaca1d0604e6b93cb22962e60cc285">update</a> ()</td></tr>
-<tr class="memdesc:adacaca1d0604e6b93cb22962e60cc285 inherit pub_methods_class_gui_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update this &amp; only this object, no children.  <a href="class_gui_component.html#adacaca1d0604e6b93cb22962e60cc285">More...</a><br /></td></tr>
-<tr class="separator:adacaca1d0604e6b93cb22962e60cc285 inherit pub_methods_class_gui_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c42118c5d2ba58ca02a1ea5ff81fe78 inherit pub_methods_class_gui_component"><td class="memItemLeft" align="right" valign="top"><a id="a7c42118c5d2ba58ca02a1ea5ff81fe78"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_component.html#a7c42118c5d2ba58ca02a1ea5ff81fe78">rm_init</a> (<a class="el" href="class_resource_manager.html">ResourceManager</a> &amp;)=0</td></tr>
-<tr class="memdesc:a7c42118c5d2ba58ca02a1ea5ff81fe78 inherit pub_methods_class_gui_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by <a class="el" href="class_resource_manager.html#ad543c034d0cef8fd2f3e8f32b49ebb3f" title="Template function. Calls rm_init (inherited from GuiComponent) and is intended to load all textures/f...">ResourceManager.initObject()</a>, inherit &amp; override to initialize textures &amp; resources. <br /></td></tr>
-<tr class="separator:a7c42118c5d2ba58ca02a1ea5ff81fe78 inherit pub_methods_class_gui_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a526481fb2424c1ea771e78be27a091f9 inherit pub_methods_class_gui_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_component.html#a526481fb2424c1ea771e78be27a091f9">setParent</a> (<a class="el" href="class_gui_component.html">GuiComponent</a> *parent)</td></tr>
 <tr class="memdesc:a526481fb2424c1ea771e78be27a091f9 inherit pub_methods_class_gui_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this object's parent. Usually called from the parent's <a class="el" href="class_gui_component.html#a5bccaccef3d0eab8af3be84cab1300de" title="Pushes the object into the vector of children. Also calls setParent() on the child object...">addChild()</a> method.  <a href="class_gui_component.html#a526481fb2424c1ea771e78be27a091f9">More...</a><br /></td></tr>
 <tr class="separator:a526481fb2424c1ea771e78be27a091f9 inherit pub_methods_class_gui_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba1969f731ef56396a1e69e50ff1f8fb inherit pub_methods_class_gui_component"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_gui_component.html">GuiComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_component.html#aba1969f731ef56396a1e69e50ff1f8fb">getParent</a> ()</td></tr>
 <tr class="memdesc:aba1969f731ef56396a1e69e50ff1f8fb inherit pub_methods_class_gui_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this object's parent.  <a href="class_gui_component.html#aba1969f731ef56396a1e69e50ff1f8fb">More...</a><br /></td></tr>
 <tr class="separator:aba1969f731ef56396a1e69e50ff1f8fb inherit pub_methods_class_gui_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9402e70432502a9b8187365a95839a05 inherit pub_methods_class_gui_component"><td class="memItemLeft" align="right" valign="top">sf::Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_component.html#a9402e70432502a9b8187365a95839a05">getFullTransform</a> ()</td></tr>
+<tr class="memdesc:a9402e70432502a9b8187365a95839a05 inherit pub_methods_class_gui_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the combined transformation of this object's parent &amp; all parents above.  <a href="class_gui_component.html#a9402e70432502a9b8187365a95839a05">More...</a><br /></td></tr>
+<tr class="separator:a9402e70432502a9b8187365a95839a05 inherit pub_methods_class_gui_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bccaccef3d0eab8af3be84cab1300de inherit pub_methods_class_gui_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_component.html#a5bccaccef3d0eab8af3be84cab1300de">addChild</a> (<a class="el" href="class_gui_component.html">GuiComponent</a> *newChild)</td></tr>
 <tr class="memdesc:a5bccaccef3d0eab8af3be84cab1300de inherit pub_methods_class_gui_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the object into the vector of children. Also calls <a class="el" href="class_gui_component.html#a526481fb2424c1ea771e78be27a091f9" title="Set this object&#39;s parent. Usually called from the parent&#39;s addChild() method. ">setParent()</a> on the child object.  <a href="class_gui_component.html#a5bccaccef3d0eab8af3be84cab1300de">More...</a><br /></td></tr>
 <tr class="separator:a5bccaccef3d0eab8af3be84cab1300de inherit pub_methods_class_gui_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,6 +168,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:ae673013e55aa98c6ee267fad3e282766 inherit pub_methods_class_gui_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_component.html#ae673013e55aa98c6ee267fad3e282766">setName</a> (std::string newName)</td></tr>
 <tr class="memdesc:ae673013e55aa98c6ee267fad3e282766 inherit pub_methods_class_gui_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the name.  <a href="class_gui_component.html#ae673013e55aa98c6ee267fad3e282766">More...</a><br /></td></tr>
 <tr class="separator:ae673013e55aa98c6ee267fad3e282766 inherit pub_methods_class_gui_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_gui_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_gui_component')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_gui_component.html">GuiComponent</a></td></tr>
 <tr class="memitem:ad25e337a93c4b506634e5766cc46ef4a inherit pro_attribs_class_gui_component"><td class="memItemLeft" align="right" valign="top"><a id="ad25e337a93c4b506634e5766cc46ef4a"></a>
 <a class="el" href="class_gui_component.html">GuiComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_component.html#ad25e337a93c4b506634e5766cc46ef4a">mParent</a></td></tr>
@@ -162,8 +181,70 @@ std::vector&lt; <a class="el" href="class_gui_component.html">GuiComponent</a> *
 <tr class="memdesc:a040e49b543fd6a36b1e0133a5e8dbd3d inherit pro_attribs_class_gui_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">The vector of children. <br /></td></tr>
 <tr class="separator:a040e49b543fd6a36b1e0133a5e8dbd3d inherit pro_attribs_class_gui_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Simple GUI Button class. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8abf4f0d2ffebe67206446947d22c865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8abf4f0d2ffebe67206446947d22c865">&#9670;&nbsp;</a></span>isPressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GuiButton::isPressed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get whether or not the button is being pressed. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the button is pressed. </dd>
+<dd>
+false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ac5890862aa1f104f615f5c2c2ee80dfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5890862aa1f104f615f5c2c2ee80dfc">&#9670;&nbsp;</a></span>rm_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GuiButton::rm_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_resource_manager.html">ResourceManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called by the <a class="el" href="class_resource_manager.html" title="Class to manage resources to avoid loading the same file twice. ">ResourceManager</a> for initialization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>The global <a class="el" href="class_resource_manager.html" title="Class to manage resources to avoid loading the same file twice. ">ResourceManager</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_gui_component.html#a7c42118c5d2ba58ca02a1ea5ff81fe78">GuiComponent</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>header/<a class="el" href="_gui_button_8h_source.html">GuiButton.h</a></li>
+<li>src/GuiButton.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

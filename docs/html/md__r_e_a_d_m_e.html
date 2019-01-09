@@ -92,7 +92,14 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html','');});
 <div class="contents">
 <div class="textblock"><p>I hate GUI, so one day I decided to write some elements once and for all.</p>
 <p>Feel free to try to use it, I'm building this on linux.</p>
-<p>~~# Note: I changed one little bit in SFML's source before building- setJoystickEnabled(bool) in sf::Window. There used to be a bug on windows in which polling the joystick caused the most annoying framerate stutter, but that fixed it. No clue if it still exists, feel free to remove that call in the <code><a class="el" href="class_application.html" title="Class to store all application data. ">Application</a></code> class if it is fixed.~~ It was fixed! </p>
+<h2>Note:</h2>
+<p>All sources build into a single testing application where I test out the elements. See <code><a class="el" href="class_application.html#a8cf8941c8db90117d3735bce5ae1fdf4" title="The main application loop. ">Application::run()</a></code> for those. The library itself doesn't rely on <code><a class="el" href="class_application.html" title="Class to store all application data. ">Application</a></code>, though.</p>
+<h2>Building:</h2>
+<p>Just run <code>make all</code> in the root directory to build. <code>make run</code> has target <code>all</code> and also executes the binary located in <code>bin/</code></p>
+<h2>Future plans:</h2>
+<ul>
+<li>Windows executable build target. </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

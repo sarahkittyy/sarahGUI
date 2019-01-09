@@ -105,7 +105,7 @@ Inheritance diagram for GuiComponent:</div>
  <div class="center">
   <img src="class_gui_component.png" usemap="#GuiComponent_map" alt=""/>
   <map id="GuiComponent_map" name="GuiComponent_map">
-<area href="class_gui_button.html" alt="GuiButton" shape="rect" coords="0,112,94,136"/>
+<area href="class_gui_button.html" title="Simple GUI Button class. " alt="GuiButton" shape="rect" coords="0,112,94,136"/>
 <area href="class_gui_container.html" title="Base container class, provides an organized border to house more complex GUI elements. " alt="GuiContainer" shape="rect" coords="104,112,198,136"/>
 <area href="class_gui_label.html" title="GUI component for displaying &amp; updating simple text. " alt="GuiLabel" shape="rect" coords="208,112,302,136"/>
 </map>
@@ -138,6 +138,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:aba1969f731ef56396a1e69e50ff1f8fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_gui_component.html">GuiComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_component.html#aba1969f731ef56396a1e69e50ff1f8fb">getParent</a> ()</td></tr>
 <tr class="memdesc:aba1969f731ef56396a1e69e50ff1f8fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this object's parent.  <a href="#aba1969f731ef56396a1e69e50ff1f8fb">More...</a><br /></td></tr>
 <tr class="separator:aba1969f731ef56396a1e69e50ff1f8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9402e70432502a9b8187365a95839a05"><td class="memItemLeft" align="right" valign="top">sf::Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_component.html#a9402e70432502a9b8187365a95839a05">getFullTransform</a> ()</td></tr>
+<tr class="memdesc:a9402e70432502a9b8187365a95839a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the combined transformation of this object's parent &amp; all parents above.  <a href="#a9402e70432502a9b8187365a95839a05">More...</a><br /></td></tr>
+<tr class="separator:a9402e70432502a9b8187365a95839a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bccaccef3d0eab8af3be84cab1300de"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gui_component.html#a5bccaccef3d0eab8af3be84cab1300de">addChild</a> (<a class="el" href="class_gui_component.html">GuiComponent</a> *newChild)</td></tr>
 <tr class="memdesc:a5bccaccef3d0eab8af3be84cab1300de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the object into the vector of children. Also calls <a class="el" href="class_gui_component.html#a526481fb2424c1ea771e78be27a091f9" title="Set this object&#39;s parent. Usually called from the parent&#39;s addChild() method. ">setParent()</a> on the child object.  <a href="#a5bccaccef3d0eab8af3be84cab1300de">More...</a><br /></td></tr>
 <tr class="separator:a5bccaccef3d0eab8af3be84cab1300de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,6 +209,26 @@ std::vector&lt; <a class="el" href="class_gui_component.html">GuiComponent</a> *
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a9402e70432502a9b8187365a95839a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9402e70432502a9b8187365a95839a05">&#9670;&nbsp;</a></span>getFullTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Transform GuiComponent::getFullTransform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the combined transformation of this object's parent &amp; all parents above. </p>
+<dl class="section return"><dt>Returns</dt><dd>sf::Transform The sum transform of all elements up to the top of the tree. </dd></dl>
 
 </div>
 </div>
@@ -430,6 +453,8 @@ std::vector&lt; <a class="el" href="class_gui_component.html">GuiComponent</a> *
 
 <p>Update this &amp; only this object, no children. </p>
 <dl class="section remark"><dt>Remarks</dt><dd>Usually only called by <a class="el" href="class_gui_component.html#ac58e20a01f67cf605b069ef853dfab66" title="Calls this-&gt;update(), as well as all childrens&#39; updateRecursive(), updating all child objects with on...">updateRecursive()</a>, but no harm should be causable by only calling this. Try not to mix calls. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="class_gui_button.html#afd7f69faf6201309727bce6ff9d04f56">GuiButton</a>.</p>
 
 </div>
 </div>

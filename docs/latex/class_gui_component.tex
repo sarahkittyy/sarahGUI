@@ -36,6 +36,8 @@ void \mbox{\hyperlink{class_gui_component_a526481fb2424c1ea771e78be27a091f9}{set
 \begin{DoxyCompactList}\small\item\em Set this object\textquotesingle{}s parent. Usually called from the parent\textquotesingle{}s \mbox{\hyperlink{class_gui_component_a5bccaccef3d0eab8af3be84cab1300de}{add\+Child()}} method. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_gui_component}{Gui\+Component}} $\ast$ \mbox{\hyperlink{class_gui_component_aba1969f731ef56396a1e69e50ff1f8fb}{get\+Parent}} ()
 \begin{DoxyCompactList}\small\item\em Get this object\textquotesingle{}s parent. \end{DoxyCompactList}\item 
+sf\+::\+Transform \mbox{\hyperlink{class_gui_component_a9402e70432502a9b8187365a95839a05}{get\+Full\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em Get the combined transformation of this object\textquotesingle{}s parent \& all parents above. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_gui_component_a5bccaccef3d0eab8af3be84cab1300de}{add\+Child}} (\mbox{\hyperlink{class_gui_component}{Gui\+Component}} $\ast$new\+Child)
 \begin{DoxyCompactList}\small\item\em Pushes the object into the vector of children. Also calls \mbox{\hyperlink{class_gui_component_a526481fb2424c1ea771e78be27a091f9}{set\+Parent()}} on the child object. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_gui_component_ac979fb459db6feda90bc7c11a6a60623}{remove\+Child}} (std\+::string name)
@@ -81,6 +83,19 @@ Pushes the object into the vector of children. Also calls \mbox{\hyperlink{class
 {\em new\+Child} & The child to associate. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_gui_component_a9402e70432502a9b8187365a95839a05}\label{class_gui_component_a9402e70432502a9b8187365a95839a05}} 
+\index{Gui\+Component@{Gui\+Component}!get\+Full\+Transform@{get\+Full\+Transform}}
+\index{get\+Full\+Transform@{get\+Full\+Transform}!Gui\+Component@{Gui\+Component}}
+\subsubsection{\texorpdfstring{get\+Full\+Transform()}{getFullTransform()}}
+{\footnotesize\ttfamily sf\+::\+Transform Gui\+Component\+::get\+Full\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the combined transformation of this object\textquotesingle{}s parent \& all parents above. 
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Transform The sum transform of all elements up to the top of the tree. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_gui_component_a521f21d8ae5369fe255a1209fcd3bd0f}\label{class_gui_component_a521f21d8ae5369fe255a1209fcd3bd0f}} 
 \index{Gui\+Component@{Gui\+Component}!get\+Name@{get\+Name}}
 \index{get\+Name@{get\+Name}!Gui\+Component@{Gui\+Component}}
@@ -201,6 +216,10 @@ Update this \& only this object, no children.
 \begin{DoxyRemark}{Remarks}
 Usually only called by \mbox{\hyperlink{class_gui_component_ac58e20a01f67cf605b069ef853dfab66}{update\+Recursive()}}, but no harm should be causable by only calling this. Try not to mix calls. 
 \end{DoxyRemark}
+
+
+Reimplemented in \mbox{\hyperlink{class_gui_button_afd7f69faf6201309727bce6ff9d04f56}{Gui\+Button}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

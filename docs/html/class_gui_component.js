@@ -3,6 +3,7 @@ var class_gui_component =
     [ "GuiComponent", "class_gui_component.html#a39e1734c781ba4ac8c87da58e0a10ebd", null ],
     [ "~GuiComponent", "class_gui_component.html#ad94998891efad935b4422cf1da69e4af", null ],
     [ "addChild", "class_gui_component.html#a5bccaccef3d0eab8af3be84cab1300de", null ],
+    [ "getFullTransform", "class_gui_component.html#a9402e70432502a9b8187365a95839a05", null ],
     [ "getName", "class_gui_component.html#a521f21d8ae5369fe255a1209fcd3bd0f", null ],
     [ "getParent", "class_gui_component.html#aba1969f731ef56396a1e69e50ff1f8fb", null ],
     [ "removeChild", "class_gui_component.html#ac979fb459db6feda90bc7c11a6a60623", null ],

@@ -12,13 +12,15 @@ Simple mostly static \mbox{\hyperlink{class_key_manager}{Key\+Manager}} class fo
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{class_key_manager_acb062eff198aaa23e63cf07763e6b9ae}{set\+Window\+Reference}} (sf\+::\+Render\+Window $\ast$m\+Window\+Ptr)
+static void \mbox{\hyperlink{class_key_manager_a48403a4f4e0619e4cb2de536c397647c}{set\+Window\+Reference}} (sf\+::\+Render\+Window $\ast$m\+Window\+Ptr)
 \begin{DoxyCompactList}\small\item\em Set the internal window reference for \mbox{\hyperlink{class_key_manager_aae40b808bf243100e3da7e63fb8cebe5}{get\+Mouse\+Pos()}} \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_key_manager_ab58d4b6587a7a83fe15c504be7424c2b}\label{class_key_manager_ab58d4b6587a7a83fe15c504be7424c2b}} 
 static void \mbox{\hyperlink{class_key_manager_ab58d4b6587a7a83fe15c504be7424c2b}{update}} ()
 \begin{DoxyCompactList}\small\item\em Main key updating function. Call once per frame. \end{DoxyCompactList}\item 
 static sf\+::\+Vector2i \mbox{\hyperlink{class_key_manager_aae40b808bf243100e3da7e63fb8cebe5}{get\+Mouse\+Pos}} ()
 \begin{DoxyCompactList}\small\item\em Retrieve the mouse position. \end{DoxyCompactList}\item 
+static short \mbox{\hyperlink{class_key_manager_a4cdc82bbf58d5c140c3512563f090e59}{get\+Mouse\+State}} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the mouse state. \end{DoxyCompactList}\item 
 static short \mbox{\hyperlink{class_key_manager_a6769c626a0ac7e919979e9128dfb6a88}{get\+Key\+State}} (sf\+::\+Keyboard\+::\+Key key)
 \begin{DoxyCompactList}\small\item\em Retrieves current keyboard states. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -61,11 +63,27 @@ Retrieve the mouse position.
 \begin{DoxyReturn}{Returns}
 sf\+::\+Vector2i The mouse position. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_key_manager_acb062eff198aaa23e63cf07763e6b9ae}\label{class_key_manager_acb062eff198aaa23e63cf07763e6b9ae}} 
+\mbox{\Hypertarget{class_key_manager_a4cdc82bbf58d5c140c3512563f090e59}\label{class_key_manager_a4cdc82bbf58d5c140c3512563f090e59}} 
+\index{Key\+Manager@{Key\+Manager}!get\+Mouse\+State@{get\+Mouse\+State}}
+\index{get\+Mouse\+State@{get\+Mouse\+State}!Key\+Manager@{Key\+Manager}}
+\subsubsection{\texorpdfstring{get\+Mouse\+State()}{getMouseState()}}
+{\footnotesize\ttfamily short Key\+Manager\+::get\+Mouse\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retrieve the mouse state. 
+
+\begin{DoxyReturn}{Returns}
+short The state of the left mouse button.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_key_manager_a6769c626a0ac7e919979e9128dfb6a88}{get\+Key\+State}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_key_manager_a48403a4f4e0619e4cb2de536c397647c}\label{class_key_manager_a48403a4f4e0619e4cb2de536c397647c}} 
 \index{Key\+Manager@{Key\+Manager}!set\+Window\+Reference@{set\+Window\+Reference}}
 \index{set\+Window\+Reference@{set\+Window\+Reference}!Key\+Manager@{Key\+Manager}}
 \subsubsection{\texorpdfstring{set\+Window\+Reference()}{setWindowReference()}}
-{\footnotesize\ttfamily static void Key\+Manager\+::set\+Window\+Reference (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{m\+Window\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily void Key\+Manager\+::set\+Window\+Reference (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{m\+Window\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 

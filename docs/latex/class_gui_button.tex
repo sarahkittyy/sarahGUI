@@ -1,14 +1,77 @@
 \hypertarget{class_gui_button}{}\section{Gui\+Button Class Reference}
 \label{class_gui_button}\index{Gui\+Button@{Gui\+Button}}
+
+
+Simple G\+UI Button class.  
+
+
+
+
+{\ttfamily \#include $<$Gui\+Button.\+h$>$}
+
 Inheritance diagram for Gui\+Button\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{class_gui_button}
 \end{center}
 \end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gui_button_a4c33541a08894c3f742ee5ea03127152}\label{class_gui_button_a4c33541a08894c3f742ee5ea03127152}} 
+\mbox{\hyperlink{class_gui_button_a4c33541a08894c3f742ee5ea03127152}{Gui\+Button}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gui_button_ac5890862aa1f104f615f5c2c2ee80dfc}{rm\+\_\+init}} (\mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} \&r)
+\begin{DoxyCompactList}\small\item\em Called by the \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} for initialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gui_button_afd7f69faf6201309727bce6ff9d04f56}\label{class_gui_button_afd7f69faf6201309727bce6ff9d04f56}} 
+void \mbox{\hyperlink{class_gui_button_afd7f69faf6201309727bce6ff9d04f56}{update}} ()
+\begin{DoxyCompactList}\small\item\em Main update function, call either by a parent object\textquotesingle{}s \mbox{\hyperlink{class_gui_component_ac58e20a01f67cf605b069ef853dfab66}{update\+Recursive()}} or call manually. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_gui_button_a8abf4f0d2ffebe67206446947d22c865}{is\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em Get whether or not the button is being pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\subsection{Detailed Description}
+Simple G\+UI Button class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gui_button_a8abf4f0d2ffebe67206446947d22c865}\label{class_gui_button_a8abf4f0d2ffebe67206446947d22c865}} 
+\index{Gui\+Button@{Gui\+Button}!is\+Pressed@{is\+Pressed}}
+\index{is\+Pressed@{is\+Pressed}!Gui\+Button@{Gui\+Button}}
+\subsubsection{\texorpdfstring{is\+Pressed()}{isPressed()}}
+{\footnotesize\ttfamily bool Gui\+Button\+::is\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get whether or not the button is being pressed. 
+
+\begin{DoxyReturn}{Returns}
+true if the button is pressed. 
+
+false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gui_button_ac5890862aa1f104f615f5c2c2ee80dfc}\label{class_gui_button_ac5890862aa1f104f615f5c2c2ee80dfc}} 
+\index{Gui\+Button@{Gui\+Button}!rm\+\_\+init@{rm\+\_\+init}}
+\index{rm\+\_\+init@{rm\+\_\+init}!Gui\+Button@{Gui\+Button}}
+\subsubsection{\texorpdfstring{rm\+\_\+init()}{rm\_init()}}
+{\footnotesize\ttfamily void Gui\+Button\+::rm\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called by the \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} for initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The global \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}}. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_gui_component_a7c42118c5d2ba58ca02a1ea5ff81fe78}{Gui\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-header/Gui\+Button.\+h\end{DoxyCompactItemize}
+header/Gui\+Button.\+h\item 
+src/Gui\+Button.\+cpp\end{DoxyCompactItemize}

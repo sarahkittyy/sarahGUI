@@ -7,5 +7,5 @@ var searchData=
   ['setname',['setName',['../class_gui_component.html#ae673013e55aa98c6ee267fad3e282766',1,'GuiComponent']]],
   ['setparent',['setParent',['../class_gui_component.html#a526481fb2424c1ea771e78be27a091f9',1,'GuiComponent']]],
   ['setstring',['setString',['../class_gui_label.html#a40dcdb9bc406ab8ecee7e1e6df69c989',1,'GuiLabel']]],
-  ['setwindowreference',['setWindowReference',['../class_key_manager.html#acb062eff198aaa23e63cf07763e6b9ae',1,'KeyManager']]]
+  ['setwindowreference',['setWindowReference',['../class_key_manager.html#a48403a4f4e0619e4cb2de536c397647c',1,'KeyManager']]]
 ];
