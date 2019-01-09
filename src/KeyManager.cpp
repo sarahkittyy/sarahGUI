@@ -6,6 +6,11 @@ std::unordered_map<sf::Keyboard::Key, short> KeyManager::mKeyStates;
 short KeyManager::mMouseState;
 /////////////
 
+void KeyManager::setWindowReference(sf::RenderWindow* newPtr)
+{
+	mWindowPtr = newPtr;
+}
+
 void KeyManager::update()
 {
 	//For every key supported by SFML...
