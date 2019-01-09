@@ -10,7 +10,11 @@ sf::Texture* ResourceManager::getTexture(std::string file)
 	{
 		//Initialize the element in the map...
 		mTextures[file] = sf::Texture();
-		mTextures[file].loadFromFile(file);
+
+		//Throw if not initialized.
+		if (!mTextures[file].loadFromFile(file))
+			throw "-- Exception: Could not load file: -- \n" + file;
+
 		//And return a pointer to it.
 		return &mTextures[file];
 	}
@@ -31,7 +35,10 @@ sf::Font* ResourceManager::getFont(std::string file)
 	{
 		//Init the element in the map & return a pointer.
 		mFonts[file] = sf::Font();
-		mFonts[file].loadFromFile(file);
+		
+		if (!mFonts[file].loadFromFile(file))
+			throw "-- Exception: Could not load file: -- \n" + file;
+
 		return &mFonts[file];
 	}
 	else //If it was found, return it.
