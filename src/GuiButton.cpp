@@ -40,15 +40,22 @@ void GuiButton::update()
 
 bool GuiButton::isPressed()
 {
+	//Transform the mousePos into mRect's local coordinate system.
+	sf::Transform totalTransform = getFullTransform();
+
+	sf::Vector2f mousePos = totalTransform
+	.getInverse()
+	.transformPoint(
+		static_cast<sf::Vector2f>(
+			KeyManager::getMousePos()
+		)
+	);
+
 	return (
+
 		//If the mouse is pressed down &..
 		KeyManager::getMouseState() == 1 &&
 		//..if the mouse is inside the button boundary rect.
-		mRect.getLocalBounds().contains
-		(
-			static_cast<sf::Vector2f> (
-				KeyManager::getMousePos()
-			)
-		)
+		mRect.getLocalBounds().contains(mousePos)
 	);
 }
