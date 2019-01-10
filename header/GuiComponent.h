@@ -18,8 +18,10 @@ public:
 	/**
 	 * @brief Default Constructor
 	 * 
+	 * @param r The global resource manager.
+	 * 
 	 */
-	GuiComponent();
+	GuiComponent(ResourceManager& r);
 
 	/**
 	 * @brief Virtual Destructor
@@ -39,12 +41,6 @@ public:
 	 * @remarks Usually only called by updateRecursive(), but no harm should be causable by only calling this. Try not to mix calls. 
 	 */
 	virtual void update();
-
-	/**
-	 * @brief Called by ResourceManager.initObject(), inherit & override to initialize textures & resources.
-	 * 
-	 */
-	virtual void rm_init(ResourceManager&) = 0;
 
 	/**
 	 * @brief Set this object's parent. Usually called from the parent's addChild() method.
