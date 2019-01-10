@@ -18,10 +18,8 @@ public:
 	/**
 	 * @brief Default Constructor
 	 * 
-	 * @param r The global resource manager.
-	 * 
 	 */
-	GuiComponent(ResourceManager& r);
+	GuiComponent();
 
 	/**
 	 * @brief Virtual Destructor
