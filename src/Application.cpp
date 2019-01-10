@@ -13,11 +13,13 @@ Application::Application() :
 int Application::run()
 {
 	GuiContainer baseGui(mResource);
-	baseGui.setPosition(25,25);
-
-	GuiButton b(mResource);
-	baseGui.addChild(&b);
-	b.setPosition(25,25);
+	baseGui.setPosition(25,25); //sf::Transform//
+	
+	GuiLabel l(mResource);
+	baseGui.addChild(&l);
+	l.setString("Hello!");
+	l.setPosition(50,50);
+	l.updateAlignment(GuiLabel::Align::MIDDLE_MIDDLE);
 
 	//Main application loop
 	while(mWindow.isOpen())
