@@ -12,12 +12,10 @@ Application::Application() :
 
 int Application::run()
 {
-	GuiContainer baseGui;
-	mResource.initObject(baseGui);
+	GuiContainer baseGui(mResource);
 	baseGui.setPosition(25,25);
 
-	GuiButton b;
-	mResource.initObject(b);
+	GuiButton b(mResource);
 	baseGui.addChild(&b);
 	b.setPosition(25,25);
 
