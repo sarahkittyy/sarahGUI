@@ -26,18 +26,6 @@ public:
 	 */
 	sf::Font* getFont(std::string file);
 
-	/**
-	 * @brief Template function. Calls rm_init (inherited from GuiComponent) and is intended to load all textures/fonts required by the specified object.
-	 * 
-	 * @tparam _GC Should be a GUI component or derived class.
-	 * @param object The object to initialze.
-	 */
-	template<typename _GC>
-	void initObject(_GC& object)
-	{
-		object.rm_init(*this);
-	}
-
 private:
 	/**
 	 * @brief Map of all textures, where the key is the filepath.
