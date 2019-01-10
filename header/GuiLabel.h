@@ -15,8 +15,10 @@ public:
 	/**
 	 * @brief Default Constructor
 	 * 
+	 * @param r The global ResourceManager.
+	 * 
 	 */
-	GuiLabel();
+	GuiLabel(ResourceManager& r);
 
 	/**
 	 * @brief Alignment enum, for aligning text.
@@ -34,13 +36,6 @@ public:
 		BOTTOM_MIDDLE,
 		BOTTOM_RIGHT
 	};
-
-	/**
-	 * @brief Resource initialization for initObject()
-	 * 
-	 * @param r The global resource manager.
-	 */
-	void rm_init(ResourceManager& r);
 
 	/**
 	 * @brief Set the text displayed.

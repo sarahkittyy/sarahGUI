@@ -15,15 +15,10 @@ public:
 	/**
 	 * @brief Default Constructor
 	 * 
-	 */
-	GuiContainer();
-
-	/**
-	 * @brief The resource initialization function.
-	 * 
 	 * @param r Reference to the global resource manager.
+	 * 
 	 */
-	void rm_init(ResourceManager& r);
+	GuiContainer(ResourceManager& r);
 private:
 
 	/**

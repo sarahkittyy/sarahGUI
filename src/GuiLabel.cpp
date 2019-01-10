@@ -1,9 +1,15 @@
 #include "GuiLabel.h"
 
-GuiLabel::GuiLabel()
+GuiLabel::GuiLabel(ResourceManager& r)
 {
 	//Default alignment.
 	mTextAlign = TOP_LEFT;
+
+	//Initialize the font, and default text settings.
+	mFont = r.getFont("resource/UI/Font/kenvector_future.ttf");
+	mText.setFont(*mFont);
+	mText.setFillColor(sf::Color::Black);
+	mText.setCharacterSize(12);
 }
 
 void GuiLabel::draw(sf::RenderTarget& target, sf::RenderStates states) const
@@ -18,15 +24,6 @@ void GuiLabel::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	{
 		target.draw(*i, states);
 	}
-}
-
-void GuiLabel::rm_init(ResourceManager& r)
-{
-	//Initialize the font, and default text settings.
-	mFont = r.getFont("resource/UI/Font/kenvector_future.ttf");
-	mText.setFont(*mFont);
-	mText.setFillColor(sf::Color::Black);
-	mText.setCharacterSize(12);
 }
 
 void GuiLabel::setString(std::string newString)

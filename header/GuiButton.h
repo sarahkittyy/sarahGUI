@@ -16,15 +16,10 @@ public:
 	/**
 	 * @brief Default Constructor.
 	 * 
-	 */
-	GuiButton();
-
-	/**
-	 * @brief Called by the ResourceManager for initialization.
+	 * @param r The global resource manager.
 	 * 
-	 * @param r The global ResourceManager.
 	 */
-	void rm_init(ResourceManager& r);
+	GuiButton(ResourceManager& r);
 
 	/**
 	 * @brief Main update function, call either by a parent object's updateRecursive() or call manually.

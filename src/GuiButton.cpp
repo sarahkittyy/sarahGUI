@@ -1,12 +1,9 @@
 #include "GuiButton.h"
 
-GuiButton::GuiButton()
+GuiButton::GuiButton(ResourceManager& r)
 {
 	mWasPressed = false;
-}
 
-void GuiButton::rm_init(ResourceManager& r)
-{
 	//Init the textures.
 	mTexUnpressed = r.getTexture("resource/UI/PNG/blue_button07.png");
 	mTexPressed = r.getTexture("resource/UI/PNG/blue_button08.png");
